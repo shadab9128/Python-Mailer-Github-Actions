@@ -19,7 +19,7 @@ def send_mail(workflow_name, repo_name, workflow_run_id):
     msg['Subject'] = subject
     msg.attach(MIMEText(body, 'plain'))
 
-    try;
+    try:
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
         server.login(sender_email, sender_password)
